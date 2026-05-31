@@ -1,0 +1,35 @@
+# macOS noise
+.DS_Store
+
+# Shell history and generated state
+.zsh_history
+.zcompdump*
+*.zwc
+.zsh_sessions/
+.viminfo
+dot_gitconfig.local
+
+# Secrets and auth
+.ssh/
+**/hosts.yml
+**/*token*
+**/*secret*
+**/*credential*
+
+# Generated dependencies and caches
+**/node_modules/
+**/__pycache__/
+**/.cache/
+**/.DS_Store
+
+# Local app/runtime state
+dot_config/private_fish/private_fish_variables
+dot_config/yazi/test
+dot_config/yarn/global/
+dot_config/flutter/tool_state
+dot_config/zed/conversations/
+
+# Backups and logs
+*.bak
+*.backup
+*.log
