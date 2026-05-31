@@ -1,13 +1,14 @@
 /opt/homebrew/bin/brew shellenv | source
 set -gx MICRO_TRUECOLOR 1
 
-fnm env --use-on-cd --shell fish | source
-
 if status is-interactive
+    fnm env --use-on-cd --shell fish | source
     starship init fish | source
     fzf --fish | source
     zoxide init fish | source
-    env TF_SHELL=fish thefuck --alias | source
+    if command -q thefuck
+        env TF_SHELL=fish thefuck --alias | source
+    end
 end
 
 function y --wraps yazi --description "Yazi wrapper that cds into the last visited directory"
